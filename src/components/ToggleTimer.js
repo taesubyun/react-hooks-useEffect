@@ -25,7 +25,9 @@ const ToggleTimer = () => {
             }}
         >
             <div style={{ color: '#344CB7' }}>
-                타이머를 시작합니다! 콘솔을 확인하세요!
+                CHECK OUT THE CONSOLE
+                <br />
+                START THE TIME
             </div>
         </div>
     );

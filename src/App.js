@@ -81,7 +81,9 @@ function App() {
                     >
                         -1
                     </button>
-                    <span style={{ marginLeft: '25px' }}>카운트 : {count}</span>
+                    <span style={{ marginLeft: '25px', fontWeight: 'bold' }}>
+                        카운트 : {count}
+                    </span>
                 </div>
                 <div
                     style={{
@@ -101,7 +103,9 @@ function App() {
                         value={name}
                         onChange={handleInputChenge}
                     />
-                    <span style={{ marginLeft: '25px' }}>Name : {name}</span>
+                    <span style={{ marginLeft: '25px', fontWeight: 'bold' }}>
+                        이름 : {name}
+                    </span>
                 </div>
                 <div
                     style={{
@@ -126,7 +130,7 @@ function App() {
                         }}
                         onClick={() => setShowTimer(!showTimer)}
                     >
-                        Toggle Timer
+                        타이머 토글
                     </button>
                 </div>
             </div>
