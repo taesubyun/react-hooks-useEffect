@@ -5,6 +5,10 @@ const ToggleTimer = () => {
         const timer = setInterval(() => {
             console.log('타이머 돌아가는 중');
         }, 1000);
+        return () => {
+            clearInterval(timer);
+            console.log('타이머가 종료 되었습니다');
+        };
     }, []);
     return (
         <div className='toggle_timer'>
