@@ -12,15 +12,20 @@ function App() {
     const handleInputChenge = (e) => {
         setName(e.target.value);
     };
-    // 컴포넌트 렌더링 될때 마다 "안 녕 하 세 요" 실행
+    // 컴포넌트 렌더링 될때 마다 "안 녕 하 세 요" 매번 실행
     // useEffect(() => {
     //     console.log('안 녕 하 세 요');
     // });
 
     // 마운트 될때 + d.array 안에 item이 변경될 때만
-    useEffect(() => {
-        console.log('COUNT 변화');
-    }, [count]);
+    // useEffect(() => {
+    //     console.log('COUNT 변화');
+    // }, [count]);
+
+    //컴포너틑 최초 렌더링 될때만 마운트 (두 번째 인자로 빈 배열)
+    // useEffect(() => {
+    //     console.log('두번째 인자로 빈배열을 줄 경우');
+    // }, []);
 
     return (
         <div className='App'>
