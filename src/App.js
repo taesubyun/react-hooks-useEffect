@@ -8,10 +8,13 @@ function App() {
     const [name, setName] = useState('');
     const [showTimer, setShowTimer] = useState(false);
 
-    const handleCount = () => {
+    const handlePlusCount = () => {
         setCount(count + 1);
     };
 
+    const handleMinusCount = () => {
+        setCount(count - 1);
+    };
     const handleInputChenge = (e) => {
         setName(e.target.value);
     };
@@ -35,9 +38,9 @@ function App() {
         <div className='App'>
             <div
                 style={{
-                    borderBottom: '1px solid grey',
                     display: 'flex',
                     justifyContent: 'center',
+                    borderBottom: '2px solid #ececec',
                 }}
             >
                 <h2>react-hooks-useEffect</h2>
@@ -52,13 +55,31 @@ function App() {
                     <button
                         style={{
                             border: 'none',
-                            borderRadius: '7px',
+                            borderRadius: '8px',
+                            backgroundColor: '#FF5959',
                             width: '250px',
+                            color: '#EEF2FF',
                             height: '40px',
+                            cursor: 'pointer',
                         }}
-                        onClick={handleCount}
+                        onClick={handlePlusCount}
                     >
-                        카운트버튼
+                        +1
+                    </button>
+                    <button
+                        style={{
+                            border: 'none',
+                            borderRadius: '8px',
+                            backgroundColor: '#FC997C',
+                            width: '250px',
+                            color: '#EEF2FF',
+                            height: '40px',
+                            cursor: 'pointer',
+                            marginLeft: '10px',
+                        }}
+                        onClick={handleMinusCount}
+                    >
+                        -1
                     </button>
                     <span style={{ marginLeft: '25px' }}>카운트 : {count}</span>
                 </div>
@@ -70,7 +91,12 @@ function App() {
                     }}
                 >
                     <input
-                        style={{ width: '250px', height: '40px' }}
+                        style={{
+                            border: '1px solid #FF5959',
+                            borderRadius: '8px',
+                            width: '250px',
+                            height: '40px',
+                        }}
                         type='text'
                         value={name}
                         onChange={handleInputChenge}
@@ -87,7 +113,17 @@ function App() {
                     {/* showTimer가 true일 때만 보여줌 */}
                     {showTimer && <ToggleTimer />}
                     <button
-                        style={{ width: '250px', height: '40px' }}
+                        style={{
+                            width: '250px',
+                            height: '40px',
+                            borderRadius: '8px',
+                            backgroundColor: '#344CB7',
+                            width: '250px',
+                            height: '40px',
+                            border: 'none',
+                            color: '#EBE645',
+                            cursor: 'pointer',
+                        }}
                         onClick={() => setShowTimer(!showTimer)}
                     >
                         Toggle Timer

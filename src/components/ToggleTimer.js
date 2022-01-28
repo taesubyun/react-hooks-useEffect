@@ -18,9 +18,15 @@ const ToggleTimer = () => {
             style={{
                 display: 'flex',
                 flexDirection: 'column',
+                backgroundColor: '#EBE645',
+                marginRight: '14px',
+                fontSize: '2.3rem',
+                fontWeight: 'bold',
             }}
         >
-            <div>타이머를 시작합니다! 콘솔을 확인하세요!</div>
+            <div style={{ color: '#344CB7' }}>
+                타이머를 시작합니다! 콘솔을 확인하세요!
+            </div>
         </div>
     );
 };
