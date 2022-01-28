@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
+
 // 토클타이머 컴포넌트가 처음 렌더링 될떄만 실행할 useEffect
+
 const ToggleTimer = () => {
     useEffect(() => {
         const timer = setInterval(() => {
@@ -11,11 +13,14 @@ const ToggleTimer = () => {
         };
     }, []);
     return (
-        <div className='toggle_timer'>
-            <div>
-                타이머를 시작합니다 <br />
-                콘솔을 확인하세요!
-            </div>
+        <div
+            className='toggle_timer'
+            style={{
+                display: 'flex',
+                flexDirection: 'column',
+            }}
+        >
+            <div>타이머를 시작합니다! 콘솔을 확인하세요!</div>
         </div>
     );
 };
