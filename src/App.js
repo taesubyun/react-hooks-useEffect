@@ -6,6 +6,8 @@ import ToggleTimer from './components/ToggleTimer';
 function App() {
     const [count, setCount] = useState(100);
     const [name, setName] = useState('');
+    const [showTimer, setShowTimer] = useState(false);
+
     const handleCount = () => {
         setCount(count + 1);
     };
@@ -42,8 +44,11 @@ function App() {
                 <span>Name : {name}</span>
             </div>
             <div>
-                <ToggleTimer />
-                <button>Toggle Timer</button>
+                {/* showTimer가 true일 때만 보여줌 */}
+                {showTimer && <ToggleTimer />}
+                <button onClick={() => setShowTimer(!showTimer)}>
+                    Toggle Timer
+                </button>
             </div>
         </div>
     );
