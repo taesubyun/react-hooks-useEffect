@@ -1,6 +1,7 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import ToggleTimer from './components/ToggleTimer';
 
 function App() {
     const [count, setCount] = useState(100);
@@ -39,6 +40,10 @@ function App() {
             <div>
                 <input type='text' value={name} onChange={handleInputChenge} />
                 <span>Name : {name}</span>
+            </div>
+            <div>
+                <ToggleTimer />
+                <button>Toggle Timer</button>
             </div>
         </div>
     );
