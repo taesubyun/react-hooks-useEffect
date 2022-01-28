@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 function App() {
@@ -8,6 +8,10 @@ function App() {
     const handleCount = () => {
         setCount(count + 1);
     };
+    // 컴포넌트 렌더링 될때 마다 "안 녕 하 세 요" 실행
+    useEffect(() => {
+        console.log('안 녕 하 세 요');
+    });
 
     return (
         <div className='App'>
